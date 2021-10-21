@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>oct21 js basics</title>
+            <script>
+                     function myfunction() {
+                                  document.getElementById("sub").innerHTML = "new sentence";}
+                     function myfunction2()
+                                    {
+                                    document.getElementById("main2").style.color="red";
+                                    
+                                    }
+
+                     function myfunction3()
+                                    {
+                                    document.getElementById("main3").style.display="none";
+                                    }             
+            </script>
+             <!-- <script src="oct21.js"></script>---    used for external js -->
+    </head>
+    <body>
+        <h1 style="text-align: center;">js introduction</h1>
+
+        <h2 id="main">One of many JavaScript HTML methods is</h2>
+
+        <button type="button" onclick="document.getElementById('main').
+        innerHTML = 'getElementById'">Click !</button>
+
+        <h3 id="sub"> the old sentence</h3>
+        <button type="button" onclick="myfunction()"> click  once again!</button>
+
+       
+
+        <h3 id="main2" style="color: blue;"> changing the colour</h3>
+        <button type="button" onclick="myfunction2()"> click to see magic!</button>
+
+        <h3 id="main3" style="color: blue;"> object gone</h3>
+        <button type="button" onclick="myfunction3()"> click to see magic!</button>
+
+
+    
+    </body>
+</html>
