@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> js loops</title>
+        
+    </head>
+        <body style="background-color: aquamarine;">
+            <p id="type1"></p>
+            <p id="type2"></p>
+            
+<!-- //for loop -->
+            <script>
+        
+                const number=["1","2","3","4","5","6"];
+                let text1 = "";
+                for (let i = 0; i < 7; i++) 
+                {
+                text1 += "The number is " + i + "<br>";
+                }
+
+                document.getElementById("type1").innerHTML = text1;
+                    
+                let text2 = "";
+                const num2=["1","2","3","4"]
+                for (let i = 0; i < num2.length; i++)
+                {
+                text2 += "The num is " + num2[i] + "<br>";
+                }
+
+                document.getElementById("type2").innerHTML = text2;
+
+            </script>
+
+<!-- for in loop             -->
+            <p>The for in statement loops through the properties of an object:</p>
+            <p id="type3"></p>
+
+            <script>
+                const details = {fname:"Ashok", lname:"T", age:21}; 
+
+                let text3 = "";
+                for (let x in details) {
+                text3 += " "+details[x] + " "+'<br><br>';
+                }
+
+                document.getElementById("type3").innerHTML = text3;
+            </script>
+<!-- for of loop -->
+
+            <p>The for of statement loops through the values of any iterable object:</p>
+
+            <p id="type4"></p>
+
+            <script>
+                const cars = ["BMW", "Volvo", "Mini"];
+
+                let text4 = "";
+                for (let x of cars) { 
+                text4 += x + "<br>";
+                }
+                document.getElementById("type4").innerHTML = text4;
+            </script>
+<!-- //do while loop// -->
+
+            <p id="type5"></p>
+
+            <script>
+                let text5 = "";
+                let i = 0;
+                do {
+                text5 += "The value is " + i+"<br>";
+                i++;
+                }
+                while (i < 8)
+                document.getElementById("type5").innerHTML = text5;
+            </script>
+
+<!-- loop with break statement//             -->
+             
+            <p id="type6"></p>
+
+            <script>
+                let text6 = "";
+                for (let i = 0; i < 10; i++) {
+                if (i === 5) { break; }
+                text6 += "The number is " + i + "<br>";
+                }
+
+                document.getElementById("type6").innerHTML = text6;
+        
+            </Script>
+<!-- loop with continue sattement //             -->
+            
+            <p id="type7"></p>
+
+            <script>
+                let text7 = "";
+                for (let i = 0; i < 10; i++) {
+                if (i === 5) { break; }
+                text7 += "The number is " + i + "<br>";
+                }
+
+                document.getElementById("type6").innerHTML = text7;
+        
+            </Script>
+ 
+<!-- iterate over string//  -->
+             
+            <p id="type8"></p>
+
+            <script>
+                const name ="united india";
+
+                let text8 = ""
+                for (const x of name) {
+                text8 += x + "<br>";
+                }
+
+                document.getElementById("type8").innerHTML = text8;
+            </script>
+            
+ <!-- Calls a function once for each array element -->
+            
+            <p>Calls a function once for each array element.</p>
+
+            <p id="type9"></p>
+
+            <script>
+                const num9 = [5, 1, 3, 4, 2];
+
+                let text9 = "";
+                num9.forEach(myFunction);
+                document.getElementById("type9").innerHTML = text9;
+
+                function myFunction(value) {
+                text9 += value + "<br>"; 
+            }
+            </script>
+
+
+
+
+           
+        </body>
+</html> 
