@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>oct 24 assignment</title>
+    </head>
+    <body style="background-color:gainsboro;">
+        <p id="one"> </p>
+        <p id="one1"></p>
+
+        <p id="two"></p>
+        <p id="two1"></p>
+        <p id="two2"></p>
+         
+        <p id="three1"></p>
+        <button onclick="myFunction1()">answer for 3</button>
+        <p id="three2"></p>
+
+        <p id="fourfilter"></p>
+        <p id="fourfilter1"></p>
+
+        <p id="five1"></p>
+        <button onclick="lowest1()">answer for 5(i)</button>
+        
+        <p id="five2"></p>
+        <button onclick="lowest2()">answer for 5(ii)</button>
+
+        
+
+
+
+
+
+        <script>
+            //  whether an `input` is an array or not.//
+                const letter=('w3resource');
+                const number=[1, 2, 4, 0];
+                document.getElementById('one').innerHTML='the letters is'+'<br>'+ Array.isArray(letter);
+                document.getElementById('one1').innerHTML='the numbers is'+'<br>'+ Array.isArray(number);
+
+            //    program to join all elements of the following array into a string.//
+            
+                const  myColor = ["Red", "Green", "White", "Black"];
+                document.getElementById("two").innerHTML = myColor.toString();
+                document.getElementById("two1").innerHTML = myColor.toString();
+                document.getElementById("two2").innerHTML = myColor.join("+");
+
+            //program to sort the items of an array(Without using sort method).//
+                
+                var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+                document.getElementById("three1").innerHTML = arr1;  
+
+                function myFunction1() {
+                arr1.sort(function(a, b){return a - b});
+                document.getElementById("three2").innerHTML = arr1;
+                } 
+            
+            // Write a JavaScript function to filter false, null, 0 and blank values from an array.
+
+                let arrfil =[58, '', 'abcd', true, null, false, 0];
+
+                document.getElementById("fourfilter").innerHTML=arrfil;
+
+                function filterarr() {
+                    arrf2 = arrfil.filter(checkarr);
+                    return arrf2;
+                    }
+
+                    function checkarr(value) {
+                    if(value !== false || value !== null || value !== 0 || value !== '') 
+                    return value;
+                    
+                    }
+                console.log(filterarr());
+    
+                document.getElementById("fourfilter1").innerHTML='the filtered array is '+'['+ arrf2+']';
+
+            // JavaScript function to find the lowest value in an array.
+
+                let num1 = [12,34,56,1];
+                document.getElementById("five1").innerHTML = num1;  
+
+                    function lowest1() {
+                    num1.sort(function(x, y){return x - y});
+                    document.getElementById("five1").innerHTML = "the lowest num is" + num1[0];
+                    } 
+            
+                let num2 = [-12,-34,0,-56,-1];
+                document.getElementById("five2").innerHTML = num2;  
+                    function lowest2() {
+                    num2.sort(function(a, b){return a - b});
+                    document.getElementById("five2").innerHTML = "the lowest num is" + num2[0];
+                    } 
+            //
+                
+        
+
+        </script>
+
+
+    
+    </body>
+</html>
