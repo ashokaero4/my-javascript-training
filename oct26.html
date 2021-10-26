@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS E6 VERISION</title>
+    </head>
+    <body style="background-color:gainsboro;">
+         
+        <p id="one"></p>
+
+        <p id="two"></p>
+
+        <p id="three"></p>
+        
+        <p id="four"></p>
+
+        <p id="five"></p>
+        <p id="six"></p>
+
+        <p id="seven"></p>
+
+        <p id="eight"></p>
+
+        <p id="nine"></p>
+
+
+
+
+        
+        
+        <script>
+            
+            //JavaScript let
+            let x=4;
+            { let x=5;
+            }
+            console.log(x);
+            let y=6;
+            {let y1=5;
+            console.log(y1);}
+            console.log(y);
+
+            //Arrow Functions
+
+            var a=10,b=20;
+            const c =(a,b) => { return a*b , a+b };
+            console.log(a*b);
+            document.getElementById("one").innerHTML ="the product of 10 and 20 is"+ " " +(a*b)+"<br>"+"<br>" +
+            "the sum of 10 and 20 is"+ " " + (a+b);
+
+
+            //for of loop over array
+           
+                const names = ["dhoni", "jadeja", "rohit","kohli","viru"];
+
+                let txt = "";
+                for (let z1 of names) { 
+                txt +=  z1 + "<br>";
+                console.log(txt);
+                }
+                document.getElementById("two").innerHTML = "the player names are" + "<br> " + txt;
+
+            // for of loop over string
+           
+                const str = "ENGINEERING";
+                let txt2 = "";
+                for (let z1 of str ){
+                    txt2+= z1 ;
+                    console.log(txt2);
+                }
+                document.getElementById("three").innerHTML = "the loop over string is " + "<br> " + txt2;
+
+            //JavaScript Map Objects
+            
+            // Create Objects
+                const apple = {name: 'apple'};
+                const samsung = {name: 'samsung'};
+                const mi = {name: 'mi'};
+
+                const mobiles = new Map();
+
+                mobiles.set(apple, 5000);
+                mobiles.set(samsung, 3000);
+                mobiles.set(mi, 2000);
+                console.log(mobiles);
+                document.getElementById("four").innerHTML = mobiles.size;
+
+
+            //JavaScript Set Objects
+                const study = new Set ();
+
+                study.add("H");
+                study.add("T");
+                study.add("M");
+                study.add("L");
+                console.log(study);
+                document.getElementById("five").innerHTML = study;
+
+                const letter = new Set();
+                letter.add("a");
+                letter.add("b");
+                letter.add("c");
+                console.log(letter);
+                document.getElementById("six").innerHTML = letter.size;
+
+
+            //javascript classes
+                 
+                class bike 
+                {
+                    constructor(name, year,model)
+                    {
+                    this.bikename= name;
+                    this.year = year;
+                    this.bikemodel = model; 
+                    }
+                }
+
+                const mybike = new bike("HONDA", 2017,"shine sp");
+                console.log(mybike);
+                document.getElementById("seven").innerHTML = mybike.bikename + "<br>" + mybike.year; 
+
+
+            //javascript promises
+              const myPromise = new Promise(function(myResolve, myReject)
+                {
+                setTimeout(function()
+                { myResolve("keep learning!!"); }, 2000);
+                }
+                );
+
+                myPromise.then(function(value) {
+                document.getElementById("eight").innerHTML = value;
+                });
+                
+            //The Symbol Type
+                const details = {
+                firstname: "Ashok",
+                lastname: "T",
+                };
+
+                let rollno = Symbol('roll no');
+                 details[rollno] = 4444;
+                 
+                console.log(details);
+                document.getElementById("nine").innerHTML = details[rollno] + " "  +" " +details.firstname;    
+
+
+            
+
+        </script>
+    </body>
+</html>
