@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>oct 29 learning</title>
+</head>
+<body>
+
+    <h1 id="one"></h1>
+    <h2 id="two"></h2>
+
+    <h2 id="three"></h2>
+    <h2 id="four"></h2>
+
+    <h2 id="five"></h2>
+
+    <h2 id="six"></h2>
+
+    <h2 id="seven"></h2>
+
+    <h2 id="eight"></h2>
+
+    <h2 id="nine"></h2>
+
+
+    
+
+
+
+    <script>
+
+//js function sequence
+        setTimeout(goodmorning, 4000);
+
+        function ashok(value){
+            document.getElementById("one").innerHTML=value;
+
+        }
+        
+        goodmorning();
+        function goodmorning() {
+                    ashok("Goodmorning !");
+        }
+        hello();
+        function hello() {
+                    ashok("Hello everyone!");
+        }
+
+//  js senquental control 
+
+        function display1(value) {
+        document.getElementById("two").innerHTML = value;
+        }
+
+        function calculator1(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+        }
+
+        let result = calculator1(5, 5);
+        display1(result);
+
+//// another type of seq control     
+        function display2(value) {
+        document.getElementById("three").innerHTML = value;
+        console.log(value);
+        }
+
+        function calculator2(num1, num2) {
+        let sum = num1 * num2;
+        display2(sum);
+        }
+
+        calculator2(10, 10);
+
+
+/// js call back
+        
+        function display3(value) {
+        document.getElementById("four").innerHTML = value;
+        }
+
+        function calculator3(num1, num2, callback) {
+        let sum = num1 - num2;
+        callback(sum);
+        }
+
+        calculator3(20, 5, display3);
+
+//Asynchronous JavaScript
+
+        setTimeout(timing, 3000);
+
+        function timing() {
+        document.getElementById("five").innerHTML = "KEEP LEARNING!";
+        }
+//
+        setTimeout(function() { timing2("concentration !"); }, 4000);
+
+        function timing2(value) {
+        document.getElementById("six").innerHTML = value;
+        }
+
+//js set interval
+
+        setInterval(myfun, 4000);
+
+        function myfun() {
+        let a = new Date();
+        document.getElementById("seven").innerHTML="The Time Is "+
+        a.getHours() + ":" +
+        a.getMinutes() + ":" +
+        a.getSeconds();
+        }
+
+
+////JavaScript Promise Object
+
+        function display4(value) {
+        document.getElementById("eight").innerHTML = value;
+        }
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+        let ashok = "student";
+
+        if (ashok == "student") {
+            myResolve("OK");
+        } else {
+            myReject("Error");
+        }
+        });
+
+        myPromise.then(
+        function(value) {display4(value);},
+        function(error) {display4(error);}
+        );
+
+///JavaScript Async.....easy way to promise
+
+        function display5(result) {
+        document.getElementById("nine").innerHTML = result;
+        console.log(result);
+        }
+
+        async function promise() {return "Hello";}
+
+        promise().then(
+        function(value) {display5(value);},
+        function(error) {display5(error);}
+        );
+
+
+    </script>
+    
+</body>
+</html>
