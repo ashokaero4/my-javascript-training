@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>oct 30 learning</title>
+    </head>
+    <body id="main">
+
+        <h1 id="one"></h1>
+        <h2 id="two"></h2>
+
+        <h2 id="three"></h2>
+        <h2 id="four"></h2>
+
+        <h3 id="five"></h3>
+
+        <h3 id="six"></h3><br>
+
+        <img id="image" src="./images/g-3.jpg" width="160" height="120" alt="burger"/><br>
+
+        <form id="sub">
+            First name: <input type="text"  value="ASHOK"><br>
+            Last name: <input type="text"  value="T"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+
+        <h2 id="seven"></h2>
+
+        
+        <script>
+
+//function parameters
+
+        function fun1(x, y = 1) {
+        return x * y;
+        }
+        document.getElementById("one").innerHTML = fun1(5);
+
+//function argument
+
+        function fun2() {
+        let sum1 = 0;
+        for(let i = 0; i < arguments.length; i++) {
+            sum1 += arguments[i];
+        }
+        return sum1;
+        }
+        document.getElementById("two").innerHTML = "the sum of the funtion using argument is "+fun2(1,2,3,4);
+
+///function call,apply //  The call() method takes arguments separately.
+//The apply() method takes arguments as an array. 
+
+        const person = {
+        fullname: function(place,state) {
+            return this.firstname + " " + this.lastname +"," + place + "," + state;
+        }
+        }
+        const person1 = {
+        firstname:"Ashok",
+        lastname: "T"
+        }
+        const person2 = {
+        firstname:"ASHOK",
+        lastname: "T"
+        }
+        document.getElementById("three").innerHTML = person.fullname.call(person1,"tenkasi", "TN"); 
+        document.getElementById("four").innerHTML = person.fullname.apply(person2, ["tenkasi", "TN"]);
+        document.write(person.fullname.apply(person2, ["tenkasi", "TN"]));
+        document.write("<br>"+person.fullname.call(person1, "tenkasi", "TN"));
+        
+
+
+//JavaScript HTML DOM
+//With the HTML DOM, JavaScript can access and change all the elements of an HTML document.   
+
+///Finding HTML Elements by HTML Object Collections
+
+        document.getElementById("five").innerHTML = document.body;
+        document.getElementById("six").innerHTML = document.head;
+
+////Changing the Value of an Attribute
+        
+        document.getElementById("image").src="./images/g-1.jpg";
+
+//// Finding HTML Elements by HTML Object Collections
+
+
+        const x = document.forms["sub"];
+        let text = "";
+        for (let i = 0; i < 2 ;i++) {
+        text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("seven").innerHTML = text;
+
+
+        </script>
+    </body>    
+</html>    
